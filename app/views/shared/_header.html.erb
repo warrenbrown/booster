@@ -1,0 +1,38 @@
+<header id="fh5co-header" role="banner">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+        <!-- Mobile Toggle Menu Button -->
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+        <%= link_to 'KEM Foundation', root_path, class:'navbar-brand' %>
+        </div>
+        <div id="fh5co-navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_page?(home_path) %>
+              <li class="active">
+            <% else %>
+              <li>
+            <% end %>
+              <%= link_to home_path do %><span>
+                home
+                <span class="border"></span></span>
+              <% end %>
+            </li>
+            <li><a href="right-sidebar.html"><span>Right Sidebar <span class="border"></span></span></a></li>
+            <li><a href="left-sidebar.html"><span>Left Sidebar <span class="border"></span></span></a></li>
+            <% if current_page?(about_path) %>
+              <li class="active">
+            <% else %>
+              <li>
+            <% end %>
+              <%= link_to about_path do %><span>
+                About Us
+                <span class="border"></span></span>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END .header -->
