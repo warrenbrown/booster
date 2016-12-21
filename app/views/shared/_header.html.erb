@@ -24,19 +24,33 @@
                   <span class="border"></span></span>
                 </li>
               <% end %>
+              <% if current_page?(edit_user_registration_path) %>
+                <li class="active">
+              <% else %>
+                <li>
+              <% end %>
+              <%= link_to edit_user_registration_path do %><span>
+                Account
+                <span class="border"></span></span>
+              </li>
+              <% end %>
             <% else %>
             <li>
               <%= link_to new_user_session_path do %>
                 <span>Log In <span class="border"></span></span>
               <% end %>
               </li>
-              <li><%= link_to new_user_registration_path do %><span>
+              <% if current_page?(new_user_registration_path) %>
+                <li class="active">
+              <% else %>
+                <li>
+              <% end %>
+              <%= link_to new_user_registration_path do %><span>
                 Sign Up
                 <span class="border"></span></span>
               </li>
               <% end %>
             <% end %>
-            <li><a href="left-sidebar.html"><span>Left Sidebar <span class="border"></span></span></a></li>
             <% if current_page?(about_path) %>
               <li class="active">
             <% else %>
